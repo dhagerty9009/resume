@@ -11,6 +11,7 @@ Jobless.cv do
     entry do
       title "Lead Developer"
       company "TwistSix"
+      homepage "http://twistsix.com/"
       description "Lawrenceville, GA"
       bulletin "Currently developing a web app for sending referrals in networking groups"
       bulletin "Wrote a simple game for the Apple Watch"
