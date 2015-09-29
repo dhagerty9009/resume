@@ -13,6 +13,7 @@ namespace :cv do
 
   desc "Commit compiled resume"
   task :commit_compiled_resume do
+    `git add .`
     `git commit -m "Compiled resume"`
     `git push origin master`
   end
