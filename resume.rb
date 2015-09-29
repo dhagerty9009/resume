@@ -1,7 +1,7 @@
 require 'jobless'
 
 Jobless.cv do
-  name "David Hagerty"
+  name "David Alan Hagerty"
   email "575 Moon Place Road, Lawrenceville, GA 30044"
   address "hagerty9009@gmail.com"
   location "404-245-6810"

@@ -2,10 +2,8 @@ task :default => 'cv:update'
 
 namespace :cv do
   desc "Update my CV"
-  task :update => [:compile_resume, :commit_compiled_resume, :checkout_pages, :rename_cv, :commit_updated_cv] do
+  task :update => [:compile_resume, :rename_cv, :commit_compiled_resume, :merge_pages, ] do
     puts "Resume updated"
-    `git commit -m "Keeping branch clean"`
-    `git push origin gh-pages`
     `git checkout master`
   end
 
@@ -21,14 +19,14 @@ namespace :cv do
   end
 
   desc "Checkout gh-pages"
-  task :checkout_pages do
+  task :merge_pages do
     `git checkout gh-pages`
-    `git checkout master cv.html`
+    `git merge master gh-pages`
   end
 
   desc "Rename cv.html"
   task :rename_cv do
-    `mv -f cv.html index.html`
+    `mv cv.html index.html`
   end
 
   desc "Commit updated CV"
