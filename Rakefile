@@ -14,6 +14,7 @@ namespace :cv do
 
   desc "Commit compiled resume"
   task :commit_compiled_resume do
+    `git add .`
     `git commit -m "Compiled resume"`
     `git push origin master`
   end
@@ -31,6 +32,7 @@ namespace :cv do
 
   desc "Commit updated CV"
   task :commit_updated_cv do
+    `git add .`
     `git commit -m "Updated CV for GitHub Pages"`
     `git push origin gh-pages`
   end
