@@ -18,18 +18,19 @@ namespace :cv do
   end
 
   desc "Checkout gh-pages"
-  task :checkout_pages do
+  task :merge_pages do
     `git checkout gh-pages`
-    `git checkout master cv.html`
+    `git merge master gh-pages`
   end
 
   desc "Rename cv.html"
   task :rename_cv do
-    `mv -f cv.html index.html`
+    `mv cv.html index.html`
   end
 
   desc "Commit updated CV"
   task :commit_updated_cv do
+    `git add .`
     `git commit -m "Updated CV for GitHub Pages"`
     `git push origin gh-pages`
   end
