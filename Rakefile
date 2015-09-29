@@ -4,6 +4,9 @@ namespace :cv do
   desc "Update my CV"
   task :update => [:compile_resume, :commit_compiled_resume, :checkout_pages, :rename_cv, :commit_updated_cv] do
     puts "Resume updated"
+    `git commit -m "Keeping branch clean"`
+    `git push origin gh-pages`
+    `git checkout master`
   end
 
   desc "Compile resume"
