@@ -2,7 +2,7 @@ task :default => 'cv:update'
 
 namespace :cv do
   desc "Update my CV"
-  task :update => [:compile_resume, :rename_cv, :commit_compiled_resume, :merge_pages, ] do
+  task :update => [:compile_resume, :rename_cv, :commit_compiled_resume, :merge_pages, :commit_updated_cv] do
     puts "Resume updated"
     `git checkout master`
   end
@@ -10,6 +10,11 @@ namespace :cv do
   desc "Compile resume"
   task :compile_resume do
     `ruby resume.rb`
+  end
+
+  desc "Rename cv.html"
+  task :rename_cv do
+    `mv cv.html index.html`
   end
 
   desc "Commit compiled resume"
@@ -22,12 +27,7 @@ namespace :cv do
   desc "Checkout gh-pages"
   task :merge_pages do
     `git checkout gh-pages`
-    `git merge master gh-pages`
-  end
-
-  desc "Rename cv.html"
-  task :rename_cv do
-    `mv cv.html index.html`
+    `git merge master`
   end
 
   desc "Commit updated CV"
