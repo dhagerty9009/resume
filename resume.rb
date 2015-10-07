@@ -13,9 +13,9 @@ Jobless.cv do
       company "TwistSix"
       homepage "http://twistsix.com/"
       description "Lawrenceville, GA"
-      bulletin "Currently developing a web app for sending referrals in networking groups"
-      bulletin "Wrote a simple game for the Apple Watch"
-      bulletin "Developed websites for various clients"
+      bulletin "Currently developing a web app for sending referrals in networking groups using Ruby on Rails"
+      bulletin "Wrote a simple game for the Apple Watch in Swift"
+      bulletin "Developed websites for various clients using various languages"
       start_date "March 2014"
       end_date "Current"
     end
