@@ -31,16 +31,11 @@ Jobless.cv do
   end
 
   open_source do
-    entry do
-      title 'AtomLinter'
-      description 'A community that maintains linting plugins for the Atom text editor'
-      github_repo 'AtomLinter/linter-reek'
+    github_repo 'AtomLinter/linter-reek' do
       bulletin 'I am lead maintainer for the linter-reek package available through this organization'
     end
-    entry do
-      title 'WeatherStorm'
-      description 'A Ruby gem to match geocoding APIs to weather APIs.'
-      github_repo 'dhagerty9009/weatherstorm'
+
+    github_repo 'dhagerty9009/weatherstorm' do
       bulletin 'Written and maintained by myself.'
       bulletin 'Can be found at https://github.com/dhagerty9009/weatherstorm'
     end
