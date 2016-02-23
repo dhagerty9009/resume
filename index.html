@@ -3,14 +3,10 @@
     <title>CV</title>
     <meta charset="utf-8">
     <style>
-      @media screen {
-  body {
-    padding: 0 10% 5em;
-  }
-}
-body {
+      body {
   color: #333;
   font-family: helvetica;
+  font-size: 12px;
 }
 h1, h2, h3, .title {
   color: #000;
@@ -22,19 +18,27 @@ h1 {
   margin-top: 20px;
 }
 h3 {
-  border-bottom: 3px solid #bbb;
-  font-size: 26px;
-  margin-top: 3em 0 0.25em 0;
+  font-size: 16px;
+  margin-top: 0;
+}
+a, a:active, a:link, a:hover, a:visited {
+  color: #444499;
+}
+ul {
+  padding-left: 1em;
+}
+#base {
+  padding: 2em;
 }
 .technologies {
   font-size: 14px;
   font-style: italic;
-  margin-top: 0;
 }
 .time-span {
   position: absolute;
   right: 0;
   top: 0;
+  font-size: 12px;
 }
 .item {
   border-bottom: 1px solid #ddd;
@@ -49,225 +53,258 @@ h3 {
   margin-top: 20px;
   text-align: right;
 }
+.flexbox {
+  page-break-inside: avoid;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.group-title {
+	width: 20%;
+	padding: 10px;
+}
+.group {
+	width: 80%;
+	padding: 10px;
+}
+@media screen {
+  #base {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 850px;
+    background-color: #fff;
+  }
+  body {
+    background-color: #222;
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
 
     </style>
   </head>
   <body>
-    <h1>David Hagerty</h1>
-    <div class="personal-info">
-      575 Moon Place Road, Lawrenceville, GA 30044</br>
-      404-245-6810</br>
-      hagerty9009@gmail.com</br>
-      <a href="dathagerty.com">dathagerty.com</a>
-    </div>
-    <div style="clear:both;"></div>
+    <div id="base">
+      <h1>David Hagerty</h1>
+      <div class="personal-info">
+        575 Moon Place Road, Lawrenceville, GA 30044</br>
+        404-245-6810</br>
+        hagerty9009@gmail.com</br>
+        <a href="https://dathagerty.com">https://dathagerty.com</a>
+      </div>
+      <div style="clear:both;"></div>
 
-    
-      <div class="group employment">
-        <h3> Employment </h3>
-        
-          <div class="item">
-            <b class="title">Lead Developer</b>
-             - TwistSix 
-            
-              <span class="homepage">
-              (<a href="http://twistsix.com/">http://twistsix.com/</a>)
-              </span>
-            
-            
-            <p>Lawrenceville, GA</p>
-            
-              <ul>
-                
-                  <li>Currently developing a web app for sending referrals in networking groups using Ruby on Rails</li>
-                
-                  <li>Wrote a simple game for the Apple Watch in Swift</li>
-                
-                  <li>Developed websites for various clients using various languages</li>
-                
-              </ul>
-            
-            <div class="time-span">
-              March 2014
-               - Current 
-            </div>
+      
+        <div class="flexbox employment">
+          <div class="group-title">
+            <h3> Employment </h3>
           </div>
-        
-          <div class="item">
-            <b class="title">Team Member</b>
-             - Chick-fil-a Scenic Highway 
+          <div class="group">
             
-            
-            <p>Snellville, GA</p>
-            
-              <ul>
+              <div class="item">
+                <b class="title">Lead Developer</b>
+                 - TwistSix 
                 
-                  <li>Prepared meals for customers quickly</li>
+                  <div class="homepage">
+                    <a href="http://twistsix.com/">http://twistsix.com/</a>
+                  </div>
                 
-                  <li>Ensured quality in a fast, high pressure environment</li>
                 
-              </ul>
+                <p>Lawrenceville, GA</p>
+                
+                  <ul>
+                    
+                      <li>Oversee the development and operation of a complex Rails app: burningreferral.com</li>
+                    
+                      <li>Organize and oversee company policies regarding software development.</li>
+                    
+                      <li>Write a simple game for the Apple Watch in Swift: Watch the Corners</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  March 2014
+                   - Current 
+                </div>
+              </div>
             
-            <div class="time-span">
-              December 2013
-               - January 2015 
-            </div>
+              <div class="item">
+                <b class="title">Team Member</b>
+                 - Chick-fil-a Scenic Highway 
+                
+                
+                <p>Snellville, GA</p>
+                
+                  <ul>
+                    
+                      <li>Prepared meals for customers quickly</li>
+                    
+                      <li>Ensured quality in a fast, high pressure environment</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  December 2013
+                   - January 2015 
+                </div>
+              </div>
+            
           </div>
-        
-          <div class="item">
-            <b class="title">Student Employee</b>
-             - Oglethorpe Dining Commons 
-            
-            
-            <p>Athens, GA</p>
-            
-              <ul>
-                
-                  <li>Served meals to students and guests of the dining hall</li>
-                
-                  <li>Maintained cleanliness around the dining hall</li>
-                
-              </ul>
-            
-            <div class="time-span">
-              October 2011
-               - May 2013 
-            </div>
+        </div>
+      
+        <div class="flexbox open-source">
+          <div class="group-title">
+            <h3> Open Source </h3>
           </div>
-        
-      </div>
-    
-      <div class="group open_source">
-        <h3> Open Source </h3>
-        
-          <div class="item">
-            <b class="title">AtomLinter</b>
+          <div class="group">
             
-            
-            
-            <p>A community that maintains linting plugins for the Atom text editor</p>
-            
-              <ul>
+              <div class="item">
+                <b class="title">linter-reek</b>
                 
-                  <li>I am lead maintainer for the linter-reek package available through this organization</li>
                 
-                  <li>Can be found at https://github.com/AtomLinter/linter-reek</li>
+                  <div class="homepage">
+                    <a href="https://github.com/AtomLinter/linter-reek">https://github.com/AtomLinter/linter-reek</a>
+                  </div>
                 
-              </ul>
+                
+                <p>An Atom Linter package for Reek, the Ruby code smell detector.</p>
+                
+                  <ul>
+                    
+                      <li>I am lead maintainer for the linter-reek package available through this organization</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  
+                  
+                </div>
+              </div>
             
-            <div class="time-span">
-              
-              
-            </div>
+              <div class="item">
+                <b class="title">weatherstorm</b>
+                
+                
+                  <div class="homepage">
+                    <a href="https://github.com/dhagerty9009/weatherstorm">https://github.com/dhagerty9009/weatherstorm</a>
+                  </div>
+                
+                
+                <p>A Ruby Gem to get forecast data</p>
+                
+                  <ul>
+                    
+                      <li>Written and maintained by myself.</li>
+                    
+                      <li>Can be found at https://github.com/dhagerty9009/weatherstorm</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  
+                  
+                </div>
+              </div>
+            
           </div>
-        
-          <div class="item">
-            <b class="title">WeatherStorm</b>
-            
-            
-            
-            <p>A Ruby gem to match geocoding APIs to weather APIs.</p>
-            
-              <ul>
-                
-                  <li>This is written by myself, and currently I am the only maintainer.</li>
-                
-                  <li>It is very much a work-in-progress.</li>
-                
-                  <li>Can be found at https://github.com/dhagerty9009/weatherstorm</li>
-                
-              </ul>
-            
-            <div class="time-span">
-              
-              
-            </div>
+        </div>
+      
+        <div class="flexbox education">
+          <div class="group-title">
+            <h3> Education </h3>
           </div>
-        
-      </div>
-    
-      <div class="group education">
-        <h3> Education </h3>
-        
-          <div class="item">
-            <b class="title">Georgia Gwinnett College</b>
+          <div class="group">
             
-            
-            
-            <p>Majoring in Information Technology, concentration in Software Development</p>
-            
-              <ul>
+              <div class="item">
+                <b class="title">Georgia Gwinnett College</b>
                 
-              </ul>
+                
+                
+                <p>Majoring in Information Technology, concentration in Software Development</p>
+                
+                  <ul>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  Fall 2015
+                  
+                </div>
+              </div>
             
-            <div class="time-span">
-              Fall 2015
-              
-            </div>
+              <div class="item">
+                <b class="title">Georgia State University</b>
+                
+                
+                
+                <p>Studied Computer Science</p>
+                
+                  <ul>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  Fall 2011
+                   - Fall 2014 
+                </div>
+              </div>
+            
           </div>
-        
-          <div class="item">
-            <b class="title">Georgia State University</b>
-            
-            
-            
-            <p>Studied Computer Science</p>
-            
-              <ul>
-                
-              </ul>
-            
-            <div class="time-span">
-              Fall 2011
-               - Fall 2014 
-            </div>
+        </div>
+      
+        <div class="flexbox references">
+          <div class="group-title">
+            <h3> References </h3>
           </div>
-        
-      </div>
-    
-      <div class="group ">
-        <h3> References </h3>
-        
-          <div class="item">
-            <b class="title">Thomas Balsamedes</b>
+          <div class="group">
             
-            
-            
-            <p>Operator, Chick-fil-a Scenic Highway</p>
-            
-              <ul>
+              <div class="item">
+                <b class="title">Thomas Balsamedes</b>
                 
-                  <li>770-979-7488</li>
                 
-              </ul>
+                
+                <p>Operator, Chick-fil-a Scenic Highway</p>
+                
+                  <ul>
+                    
+                      <li>770-979-7488</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  
+                  
+                </div>
+              </div>
             
-            <div class="time-span">
-              
-              
-            </div>
+              <div class="item">
+                <b class="title">Jason Friedlander</b>
+                
+                
+                
+                <p>Founder, TwistSix LLC</p>
+                
+                  <ul>
+                    
+                      <li>(404) 966-7094</li>
+                    
+                  </ul>
+                
+                <div class="time-span">
+                  
+                  
+                </div>
+              </div>
+            
           </div>
-        
-          <div class="item">
-            <b class="title">Jason Gambon</b>
-            
-            
-            
-            <p>Youth Minister, St. John Neumann Catholic Church</p>
-            
-              <ul>
-                
-                  <li>404-538-9444</li>
-                
-              </ul>
-            
-            <div class="time-span">
-              
-              
-            </div>
-          </div>
-        
-      </div>
-    
+        </div>
+      
+    </div>
   </body>
 </html>
 
