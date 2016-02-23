@@ -32,19 +32,18 @@ Jobless.cv do
 
   open_source do
     github_repo 'AtomLinter/linter-reek' do
-      bulletin 'I am lead maintainer for the linter-reek package available through this organization'
+      bulletin 'I am lead maintainer for this package.'
     end
 
     github_repo 'dhagerty9009/weatherstorm' do
       bulletin 'Written and maintained by myself.'
-      bulletin 'Can be found at https://github.com/dhagerty9009/weatherstorm'
     end
   end
 
   education do
     entry do
       title 'Georgia Gwinnett College'
-      description 'Majoring in Information Technology, concentration in Software Development'
+      description 'Major: Information Technology - Software Development'
       start_date 'Fall 2015'
     end
     entry do
